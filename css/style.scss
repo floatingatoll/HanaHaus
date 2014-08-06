@@ -11,7 +11,9 @@ body {
 	line-height: 1.5em;
 	color: $brown;
 }
-
+img {
+	border:none;
+}
 a {
 	text-decoration: none;
 	color:black;
@@ -289,7 +291,9 @@ input[type=submit]
 }
 
 @media (min-width: 768px) {
-
+	.bottom {
+		height: 100px;
+	}
 	.hexText{
 		position: relative;
 		margin-bottom: -150px;

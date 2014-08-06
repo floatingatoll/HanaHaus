@@ -5,6 +5,9 @@ body {
   line-height: 1.5em;
   color: #665e5b; }
 
+img {
+  border: none; }
+
 a {
   text-decoration: none;
   color: black; }
@@ -235,6 +238,9 @@ input[type=submit] {
   display: none; }
 
 @media (min-width: 768px) {
+  .bottom {
+    height: 100px; }
+
   .hexText {
     position: relative;
     margin-bottom: -150px; }
