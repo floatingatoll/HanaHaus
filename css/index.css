@@ -1,0 +1,30 @@
+* {
+	font-family: 'PT Sans Narrow', sans-serif;
+}
+
+#email {
+	text-align: center;
+	font-size: 28px;
+}
+
+#checkbox {
+	/*background: url() left top no-repeat;*/
+}
+
+#submit {
+	background-color: #000000;
+	color: white;
+	border: none;
+}
+
+#footer {
+	background-color: #a89b94;
+	text-align: center;
+	font-size: 30px;
+	color: white;
+	padding: 80px;
+}
+
+#facebook, #twitter {
+	margin-left: 5px;
+}

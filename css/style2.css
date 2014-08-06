@@ -1,0 +1,420 @@
+@media (min-width: 480px) {
+
+@import url(http://fonts.googleapis.com/css?family=Fjalla+One);
+
+body {
+	margin:0;
+	font-family: 'Merriweather', serif;
+	font-size: 20px;
+}
+a {
+	text-decoration: none;
+	color:black;
+
+}
+h2 {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-weight: 400; 
+	font-size: 60px;
+}
+
+path[class^="side"]
+{
+	-webkit-transition: fill 2s ease;
+	-moz-transition: fill 2s ease;
+	-o-transition: fill 2s ease;
+	transition: fill 2s ease;
+}
+
+
+.active {
+	-webkit-transition: fill 0.1s ease !important;
+	-moz-transition: fill 0.1s ease !important;
+	-o-transition: fill 0.1s ease !important;
+	transition: fill 0.1s ease !important;
+}
+.mobile .active {
+	-webkit-transition: fill 0s !important;
+	-moz-transition: fill 0s !important;
+	-o-transition: fill 0s !important;
+	transition: fill 0s !important;
+}
+.side0 {
+	fill:white;
+}
+
+.side0.active {
+	fill: rgb(91,201,227);
+}
+
+.side1 {
+	fill:rgb(240,240,240);
+}
+
+.side1.active {
+	fill:rgb(222,225,78);
+}
+
+.side2 {
+	fill:rgb(247,247,247);
+}
+
+.side2.active{
+	fill:rgb(167,155,148);
+}
+
+.mask {
+	fill:black;
+	-webkit-transition: fill 20s ease;
+	-moz-transition: fill 20s ease;
+	-o-transition: fill 20s ease;
+	transition: fill 20s ease;
+}
+.mobile .mask {
+	fill:black;
+	-webkit-transition: fill 30s ease;
+	-moz-transition: fill 30s ease;
+	-o-transition: fill 30s ease;
+	transition: fill 30s ease;
+}
+.mask.active {
+	fill:white;
+}
+.home img {
+	display: block;
+	position: absolute;
+	bottom: 20px;
+	margin-left: -15px;
+	left:50%;
+}
+.info {
+	width: 100%;
+	position: relative;
+	height:2000px;
+}
+
+.question {
+	position: relative;
+	height:500px;
+	background: url("../img/border.png")  repeat-y center 0;
+
+}
+.question h2 {
+	  position: relative;
+	  top: 50%;
+	  transform: translateY(-50%);
+	  text-align: center;
+	  padding: 15px;
+	  background: white;
+}
+.summaryBottom h3 {
+	display: block;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-weight: 400; 
+	font-size: 70px;
+
+}
+.lines {
+
+	position: relative;
+
+}
+.lines img:nth-child(1)
+{
+
+	margin-left: 26%;
+	margin-top:175px;
+	height:349px;
+/*	height: 460px;
+*/}
+.lines img:nth-child(2)
+{
+	margin-left: 7%;
+/*	height: 460px;
+*/	margin-top: 0px;
+	height:349px;
+
+
+}
+.lines img:nth-child(3)
+{
+	margin-left: -13%;
+	height:349px;
+	margin-top: 0px;
+}
+
+.hollow {
+	position: absolute;
+	width:100%;
+	top:400px;
+}
+.hollow img {
+	position: relative;
+	opacity: 0.8;
+}
+.hollow img:nth-child(1) 
+{
+	
+	left:-50px;
+}
+.hollow img:nth-child(2) 
+{
+	
+	top:300px;
+	right:-420px;
+}
+
+.hollow img:nth-child(3) 
+{
+	
+	top:600px;
+	right:-37px;
+}
+
+.hollow1 {
+	posistion:absolute;
+	background: url("../img/hex_dine.png") no-repeat;
+	height:342px;
+	text-align:center;
+	margin-left:5%;
+	width:300px;
+	background-size:100%;
+	}
+.hollow1 p{
+	padding-top: 30%;
+	text-align: left;
+	padding-left: 13%;
+	background-size:80%;
+	font-size:85%;
+	width:80%;
+}
+
+
+.hollow2 {
+	posistion:absolute;
+	background: url("../img/hex_connect.png") no-repeat;
+	text-align:center;
+	margin-left: 59%;
+	margin-top: 100px;
+	width:300px;
+	height:342px;
+	background-size:100%;
+
+	}
+.hollow2 p{
+	padding-top: 30%;
+	text-align: left;
+	padding-left: 13%;
+	width:80%;
+	font-size:85%;
+}
+
+.hollow3 {
+	posistion:absolute;
+	background: url("../img/hex_learn.png") no-repeat;
+	height:342px;
+	text-align:center;
+	margin-left: 59%;
+	width:300px;
+	margin-top:-48px;
+	background-size:100%;
+	margin-top: -33px;
+	}
+.hollow3 p{
+	padding-top: 30%;
+	text-align: left;
+	padding-left: 13%;
+	width:80%;
+	font-size:85%;
+}
+
+
+.hollow4 {
+	posistion:absolute;
+	background: url("../img/hex_play.png") no-repeat;
+	height:342px;
+	text-align:center;
+	margin-left: 4%;
+	margin-top: 150px;
+	width:300px;
+	background-size:100%;
+	}
+.hollow4 p{
+	padding-top: 30%;
+	text-align: left;
+	padding-left: 13%;
+	width:80%;
+	font-size:85%;
+}
+
+
+.more {
+	position: relative;
+	background: url("../img/border.png")  repeat-y center 0;
+	height: 300px;
+}
+.more h3{
+	display: block;
+	text-align: center;
+	background: white;
+	padding: 20px;
+	position: relative;
+  	top: 50%;
+  transform: translateY(-50%);
+}
+.seperator {
+	position: relative;
+	background: white;
+}
+
+.social {
+	background-color: rgb(167,155,148);
+	text-align: center;
+	font-size: 30px;
+	color: white;
+	padding: 80px;
+
+}
+
+#facebook, #twitter {
+	margin-left: 5px;
+}
+/*.social img {
+	display: block;
+	margin: 0px auto;
+
+}*/
+
+
+
+
+.start {
+	width: 100%;
+	height: 447px;
+	overflow: visible;
+	margin-top:100px;
+	 background: url("../img/Courtyard-Color2.jpg") no-repeat center center; 
+	  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.start img {
+	margin-bottom: -100px;
+	position: relative;
+	z-index: 99;
+	float:left;
+}
+.start .summary {
+	padding-top: 250px;
+}
+
+.start .summary p {
+	background-color:white;
+	padding: 12px 20px;
+	font-size: 20px;
+	line-height: 30px;
+	color: rgb(35,31,32); 
+}
+.start .summary p {
+	margin-bottom: 30px;
+}
+
+
+
+#container
+{
+    position:relative;
+    background-image: "img/hex_hollow.png";
+}
+
+#image
+{    
+    position:absolute;
+    left:10px;
+    top:0;
+}
+#text
+{
+    z-index:100;
+    position:absolute;    
+    font-size:24px;
+    font-weight:bold;
+
+}
+
+
+
+.poop {
+
+	position: relative;
+
+}
+.poop h3:nth-child(1)
+{
+
+line-height: 460px;
+padding-right: 70%;
+text-align: right;
+background: url("../img/hex1.png")  no-repeat center center;
+}
+
+.location {
+	background-color:#231f20;
+	width:'100%';
+	padding-top:30px;
+	margin-top:0px;
+	height:30px;
+	color:white;
+		background-color:black; width:100%;
+		text-indent:75%;
+	font-size:larger;
+}
+
+.location a{
+	color:white;
+	background-color:black; 
+	width:100%;
+}
+
+
+.side_logo{
+	background: url("../img/side_logo.png") no-repeat;
+	z-index:100;
+height: 100%;
+background-size: 40%;
+}
+
+.side_logo p{
+	color: white;
+width: 20%;
+font-size: medium;
+padding-top: 40%;
+padding-left: 16%;
+}
+
+.side_logo_img{
+	width:40%;
+}
+
+.mobile_info{
+	display:none;
+}
+
+.side_logo_fill{
+	background: url("../img/side_logo_empty.png")  no-repeat;
+	background-size: 250px 600px;
+	height:600px;
+	color:white;
+	z-index:99;
+	float:left;
+	width:250px;
+}
+.side_logo_fill p{
+	margin-left: 169px;
+	margin-top: 350px;
+}
+	.mobile_text {
+		display:none;
+	}
+}

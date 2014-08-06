@@ -1,0 +1,453 @@
+$black: #231f20;
+$brown: #665e5b;
+$lightBrown: #a79b94;
+$font-header: 'Fjalla One', sans-serif;
+$font-body: 'Merriweather', serif;
+
+body {
+	margin:0;
+	font-family: $font-body;
+	font-size: 16px;
+	line-height: 1.5em;
+	color: $brown;
+}
+
+a {
+	text-decoration: none;
+	color:black;
+
+}
+h1, h2, h3 {
+	font-family: $font-header;
+	font-weight: normal; 
+	line-height: 1.2em;
+	text-transform: uppercase;
+}
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+.mobile {
+	display: none;
+}
+path[class^="side"]
+{
+	-webkit-transition: fill 2s ease;
+	-moz-transition: fill 2s ease;
+	-o-transition: fill 2s ease;
+	transition: fill 2s ease;
+}
+
+
+.active {
+	-webkit-transition: fill 0.1s ease !important;
+	-moz-transition: fill 0.1s ease !important;
+	-o-transition: fill 0.1s ease !important;
+	transition: fill 0.1s ease !important;
+}
+.accelerometer .active {
+	-webkit-transition: fill 0s !important;
+	-moz-transition: fill 0s !important;
+	-o-transition: fill 0s !important;
+	transition: fill 0s !important;
+}
+.side0 {
+	fill:white;
+}
+
+.side0.active {
+	fill: rgb(91,201,227);
+}
+
+.side1 {
+	fill:rgb(240,240,240);
+}
+
+.side1.active {
+	fill:rgb(222,225,78);
+}
+
+.side2 {
+	fill:rgb(247,247,247);
+}
+
+.side2.active{
+	fill:rgb(167,155,148);
+}
+
+.mask {
+	fill:black;
+	-webkit-transition: fill 20s ease;
+	-moz-transition: fill 20s ease;
+	-o-transition: fill 20s ease;
+	transition: fill 20s ease;
+}
+.accelerometer .mask {
+	fill:black;
+	-webkit-transition: fill 30s ease;
+	-moz-transition: fill 30s ease;
+	-o-transition: fill 30s ease;
+	transition: fill 30s ease;
+}
+.mask.active {
+	fill:white;
+}
+.home img {
+	display: block;
+	position: absolute;
+	bottom: 20px;
+	margin-left: -15px;
+	left:50%;
+}
+
+
+.intro {
+	width: 100%;
+	height: 600px;
+	overflow: visible;
+	
+	background: url("../img/Courtyard-Color2.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	color: #fff;
+
+  	.introSide {
+  		margin-top: -160px;
+		z-index: 100;
+		position: absolute;
+		width: 457px;
+		max-width: 50%;
+		height: 912px;
+  		overflow: visible;
+  		background: url("../img/side_logo_empty.png") no-repeat center center;
+		background-size: 100%;
+  		h2 {
+		
+			font-size: 4em;
+			margin: 391px auto 30px 130px;
+		}
+		p {
+			font-style: italic;
+			
+			margin: 0px 25px auto 180px;
+			display: block;
+		
+		} 
+  	}
+	
+	
+}
+.location {
+	background-color:$black;
+	position: relative;
+	z-index: 1;
+	a {
+		display: block;
+		text-align: right;
+		color: white;
+		margin: 0 100px;
+		padding: 20px;
+		font-family: $font-header;
+		font-size: 1.3em;
+		text-transform: uppercase;
+
+		img, p{
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 5px;
+		}
+	}
+}
+.hexImages{
+	position: absolute;
+	width: 100%;
+	overflow: hidden;
+	img{
+		display: block;
+		margin: auto;
+		&:nth-child(1) {
+			margin-top:100px;
+		}
+		&:nth-child(2) {
+			margin-top:-100px;
+		}
+	}
+}
+.hexText h3{
+	font-size: 3.5em;
+	color: $black;
+	margin:0;
+}
+
+.seperator {
+	background: url("../img/border.png")  repeat-y center 0;
+	height: 250px;
+	position: relative;
+	margin:80px auto;
+}
+
+.subscribe {
+	margin: 0 auto;
+	height: 350px;
+	width:100%;
+	z-index: -1;
+	overflow: hidden;
+	font-size: 1.2em;
+}
+.subscribe form {
+	display: block;
+	
+	margin:50px auto;
+	text-align: center;
+}
+
+input {
+	border: 1px solid rgb(35,31,32);
+}
+
+textarea:focus, input:focus{
+    outline: 0;
+}
+
+input[type=text] {
+	width: 346px;
+	height:34px;
+	border: 1px solid $brown;
+	background-color: rgba($brown,0.05);
+	margin: 20px auto;
+	font-size: 1.2em;
+	padding: 0 10px;
+}
+input[type=checkbox] {
+	display:none;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+	padding-left:17px;
+	height:12px; 
+	display:inline-block;
+	line-height:12px;
+	margin-top:15px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	
+	vertical-align:middle;
+	cursor:pointer;
+
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+	background-position: 0 -12px;
+}
+label.css-label {
+	background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_593adae689b6e344cda220b0a046cec5.png);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+input[type=submit]
+{
+    display: block;
+   color: white;
+
+   font-size: 1.2em;
+    padding: 5px 15px;
+    margin: 0 auto;
+    background-color: $black;
+   font-family: $font-body;
+    cursor: pointer;
+}
+.social {
+	height:233px;
+	background-color: $lightBrown;
+	padding-top:85px;
+	text-align: center;
+	span {
+		display: inline-block;
+	}
+	h3, a {
+		display: inline-block;
+		vertical-align: middle;
+
+		margin: 0px 5px;
+		font-size: 2em;
+		color: #fff;
+	}
+
+}
+.success{
+  text-align: center;
+  display:none;
+}
+
+@media (min-width: 768px) {
+
+	.hexText{
+		position: relative;
+		margin-bottom: -150px;
+		div.outer {
+			width: 381px;
+			height: 439px;
+			display: table;
+			position: relative;
+
+			.inner {
+				display: table-cell;
+				vertical-align: middle;
+
+			}
+			h3 {
+				padding-left:95px;
+				
+			}
+			p {
+				padding-left: 95px;
+				width:270px;
+			}
+			&:nth-child(1) {
+				background: url('../img/hex_dine.png') center center no-repeat;
+				margin-right: 65%;
+				float: right;
+			}
+			&:nth-child(2) {
+				background: url('../img/hex_connect.png') center center no-repeat;
+				top: -254px;
+				margin-left: 65%;
+				
+			}
+			&:nth-child(3) {
+				background: url('../img/hex_learn.png') center center no-repeat;
+				top:-300px;
+				margin-left:65%;
+			}
+			&:nth-child(4) {
+				background: url('../img/hex_play.png') center center no-repeat;
+				float: right;
+				margin-right: 50%;
+				top:-150px;
+			}
+		}
+	}
+}
+@media (min-width: 768px) and (max-width: 992px) {
+	.intro .introSide h2 {
+    	font-size: 3.5em;
+  	}
+  	.location a {
+  		margin: 0 0 0 100px;
+  	}
+	.hexImages{
+		img{
+			&:nth-child(1) {
+				margin-top:230px;
+			}
+			&:nth-child(3) {
+				margin-top: 300px;
+				padding-left: 50px;
+			}
+		}
+	}
+	.hexText div.outer{
+		&:nth-child(1) {
+			margin-right: 50%;
+			margin-top: -100px;
+		}
+		&:nth-child(2) {
+			margin-left:50%;
+			top: 200px;
+		}
+		&:nth-child(3) {
+			top: 140px;
+			margin-left: 50%;
+		}
+		
+	}
+}
+@media (max-width: 767px) and (orientation : landscape) {
+	.intro .introSide {
+		max-width: 35%;
+	}
+
+}
+
+@media (max-width: 480px) {
+	.intro .introSide {
+		max-width: 60%;
+		h2 {
+			font-size: 1.8em;
+		}
+	}
+	input[type=text] {
+		width: 246px;
+	}
+	.location a {
+		padding: 20px 0;
+	}
+}
+@media (max-width: 767px) {
+	.mobile {
+		display: inherit;
+	}
+	.notmobile {
+		display: none;
+	}
+	.seperator {
+		display: none;
+	}
+	.intro {
+		height: 288px;
+		.introSide {
+			margin-top: -100px;
+			height: 450px;
+			h2 {
+				font-size: 2em;
+				margin: 200px auto 30px 50px;
+			}
+			p {
+				display: none;
+			}
+		}
+	}
+	.introText {
+		margin: 80px 20px;
+	}
+	.location a {
+		text-align: center;
+		margin: 0;
+
+	}
+	.hexImages {
+		display: none;
+	}
+	.hexText .outer {
+		
+		margin: 40px 20px;
+		min-height: 240px;
+		&:nth-child(1) {
+			background: url('../img/dine.png') right bottom no-repeat;
+		}
+		&:nth-child(2) {
+			background: url('../img/connect.png') right bottom no-repeat;
+		}
+		&:nth-child(3) {
+			background: url('../img/learn.png') right bottom no-repeat;
+		}
+		&:nth-child(4) {
+			background: url('../img/play.png') right bottom no-repeat;
+		}
+	}
+	.drawing {
+		border: 1px solid $lightBrown;
+		height: 229px;
+		width: 100%;
+		background: url('../img/drawing.png') center center no-repeat;
+	}
+}

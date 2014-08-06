@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HanaHaus, a public cafe</title>
+ <link href='http://fonts.googleapis.com/css?family=Fjalla+One|Merriweather:400,400italic' rel='stylesheet' type='text/css'>
+ <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <script type="text/javascript" src="js/d3.v3.min.js"></script>
+  <script type="text/javascript" src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+  <link href="css/style.css" type="text/css" rel="stylesheet">
+<meta name="viewport" content="width=device-width">
+
+</head>
+<body>
+<div class="home">
+  <svg width="100%" height ="100%" id="svg"></svg>
+  <img src="img/arrow.png"></img>
+  
+  
+</div>  
+  <div class="intro">
+    <div class="introSide"  data-scroll-reveal="ease-in 200px and reset over .66s">
+      <h2>HanaHaus</h2>
+      <p>A community of purpose defining a new Caf&egrave; experience where creative individuals and entrepreneurs can come together to meet, socialize, share ideas and connect with experts
+    </p>
+    </div>
+  
+  </div>
+
+
+
+</div>
+<div class="introText mobile">
+  <p>A community of purpose defining a new Caf&egrave; experience where creative individuals and entrepreneurs can come together to meet, socialize, share ideas and connect with experts
+  </p>
+</div>
+<div class="location">
+  <a href="https://www.google.com/maps/place/456+University+Ave,+Palo+Alto,+CA+94301/@37.4475588,-122.1595498,17z/data=!3m1!4b1!4m2!3m1!1s0x808fbb38fcfe46f1:0xffd732ead2e767f3"><img src="img/map.png" alt=""> 456 University Ave, Palo Alto</a>
+</div>
+
+<div class="seperator" data-scroll-reveal="ease move 100px"></div>
+<div class="info clearfix">
+  <div class="hexImages ">
+    <img data-scroll-reveal="ease-in 200px and reset over .66s" src="img/hex1.png" alt="">
+    <img data-scroll-reveal="ease-in 200px and reset over .66s" src="img/hex2.png" alt="">
+    <img data-scroll-reveal="ease-in 200px and reset over .66s" src="img/hex3.png" alt="">
+  </div>
+  <div class="hexText">
+    <div class="outer" data-scroll-reveal="ease-in 200px and reset over .66s">
+      <div class="inner">
+        <h3>Savor</h3>
+        <p>Outdoor/Indoor cafe serving world-class coffee and nourishing food service in a bistro setting. Open to all for breakfast, lunch and dinner</p>
+      </div>
+    </div>
+    <div class="outer" data-scroll-reveal="ease-in 200px and reset over .66s">
+      <div class="inner">
+        <h3>Work</h3>
+        <p> Resources for entrepreneurs
+   to collaborate on innovative technology featuring a help desk dedicated to connecting entrepreneurs, specialists, designers, hackers, 
+  and investors</p>
+      </div>
+    </div>
+    <div class="outer" data-scroll-reveal="ease-in 200px and reset over .66s">
+      <div class="inner">
+        <h3>Learn</h3>
+        <p>Lectures and teachings by experts in areas of interest to technology entrepreneurs</p>
+        </div>
+    </div>
+    <div class="outer" data-scroll-reveal="ease-in 200px and reset over .66s">
+      <div class="inner">
+        <h3>Play</h3>
+        <p>Music, stand-up comedy, movies and other entertainment for the local community</p>
+            </div>
+    </div>
+  </div>
+  
+    
+  </div>
+</div> 
+<div class="seperator" data-scroll-reveal="ease move 200px"></div>
+<div class="mobile drawing">
+ </div>
+<div class="subscribe" data-scroll-reveal="ease move 300px">
+  <form action="#" id="ajax-form">
+    <p>Enter your email below and get shortlisted to our opening party.</p>
+    <input type="text" id="email" name="email"><br>
+    <input type="submit" value="Enter">
+  </form>
+  <p class="success" id="success">Thank you for subscribing.<br> We'll keep you posted.</p>
+</div>
+<div class="social" data-scroll-reveal="ease move 200px">
+  <h3>Spread The Word</h3>
+  <span>
+  <a href="https://www.facebook.com/hanahaus"><img src="img/facebook.png" alt=""></a>
+  <a href="https://twitter.com/HanaHausBayArea"><img src="img/twitter.png" alt=""></a>
+  </span>
+</div>
+
+
+<script src="js/script.js"></script>
+  <script src='js/scrollReveal.js-master/scrollReveal.js'></script> 
+  <script>
+    if (!("ontouchstart" in document.documentElement)) {
+      window.scrollReveal = new scrollReveal();
+    }
+  </script>
+<script type="text/javascript"> 
+      $('#ajax-form').submit(function(){
+        console.log($("#email").val());
+        $.ajax({
+          dataType: 'jsonp',
+          url: "http://getsimpleform.com/messages/ajax?form_api_token=14ddc2fa949137479ce6859fb788d3e9",
+          data: {
+            email: $("#email").val(),
+          }
+        }).done(function() {
+          document.getElementById("ajax-form").style.display = 'none';
+          document.getElementById("success").style.display = 'block';
+        });
+        return false;
+      })
+
+  </script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53591413-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!--<script>window.onorientationchange = function() { var orientation = window.orientation; switch(orientation) { case 0: window.location.reload(); break; case 90: window.location.reload(); break; case -90: window.location.reload(); break; } }</script>-->
+</body>
+</html>
