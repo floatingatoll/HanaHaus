@@ -2,7 +2,22 @@
 
 */
 
+if (!("ontouchstart" in document.documentElement)) {
+  var s = skrollr.init({
+      forceHeight: false,
+      constants: {
+          svgH: window.innerHeight
+      }
+  });
+}
 
+
+if (window.innerWidth >= 768 && window.innerWidth<=992 ) {
+  if (!document.getElementsByClassName("info")[0].classList.contains('clearfix')) {
+    document.getElementsByClassName("info")[0].classList.add('clearfix');
+
+  }
+}
 var accelerometerChecked=false;
 var hPos, vPos;
 
