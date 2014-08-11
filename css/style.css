@@ -138,7 +138,8 @@ path[class^="side"] {
   overflow: hidden; }
   .hexImages img {
     display: block;
-    margin: auto; }
+    margin: auto;
+    position: relative; }
     .hexImages img:nth-child(1) {
       margin-top: 100px; }
     .hexImages img:nth-child(2) {
@@ -153,7 +154,10 @@ path[class^="side"] {
   background: url("../img/border.png") repeat-y center 0;
   height: 250px;
   position: relative;
-  margin: 80px auto; }
+  margin: 80px auto 50px auto; }
+
+.bottom {
+  margin-top: -200px; }
 
 .subscribe {
   margin: 0 auto;
@@ -238,9 +242,6 @@ input[type=submit] {
   display: none; }
 
 @media (min-width: 768px) {
-  .bottom {
-    height: 100px; }
-
   .hexText {
     position: relative;
     margin-bottom: -150px; }
@@ -260,20 +261,34 @@ input[type=submit] {
       .hexText div.outer:nth-child(1) {
         background: url("../img/hex_dine.png") center center no-repeat;
         margin-right: 65%;
+        clear: both;
         float: right; }
       .hexText div.outer:nth-child(2) {
         background: url("../img/hex_connect.png") center center no-repeat;
-        top: -254px;
-        margin-left: 65%; }
+        -ms-transform: translate(0, -254px);
+        -webkit-transform: translate(0, -254px);
+        -moz-transform: translate(0, -254px);
+        transform: translate(0, -254px);
+        /*top: -254px;*/
+        margin-left: 65%;
+        clear: both; }
       .hexText div.outer:nth-child(3) {
         background: url("../img/hex_learn.png") center center no-repeat;
-        top: -300px;
-        margin-left: 65%; }
+        -ms-transform: translate(0, -300px);
+        -webkit-transform: translate(0, -300px);
+        -moz-transform: translate(0, -300px);
+        transform: translate(0, -300px);
+        margin-left: 65%;
+        clear: both; }
       .hexText div.outer:nth-child(4) {
         background: url("../img/hex_play.png") center center no-repeat;
         float: right;
         margin-right: 50%;
-        top: -150px; } }
+        clear: both;
+        -ms-transform: translate(0, -150px);
+        -webkit-transform: translate(0, -150px);
+        -moz-transform: translate(0, -150px);
+        transform: translate(0, -150px); } }
 @media (min-width: 768px) and (max-width: 992px) {
   .intro .introSide h2 {
     font-size: 3.5em; }
@@ -292,10 +307,19 @@ input[type=submit] {
     margin-top: -100px; }
   .hexText div.outer:nth-child(2) {
     margin-left: 50%;
-    top: 200px; }
+    -ms-transform: translate(0, 200px);
+    -webkit-transform: translate(0, 200px);
+    -moz-transform: translate(0, 200px);
+    transform: translate(0, 200px); }
   .hexText div.outer:nth-child(3) {
-    top: 140px;
-    margin-left: 50%; } }
+    -ms-transform: translate(0, 140px);
+    -webkit-transform: translate(0, 140px);
+    -moz-transform: translate(0, 140px);
+    transform: translate(0, 140px);
+    margin-left: 50%; }
+
+  .bottom {
+    margin-top: 120px; } }
 @media (max-width: 767px) and (orientation: landscape) {
   .intro .introSide {
     max-width: 35%; } }

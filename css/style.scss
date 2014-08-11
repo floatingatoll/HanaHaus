@@ -4,16 +4,27 @@ $lightBrown: #a79b94;
 $font-header: 'Fjalla One', sans-serif;
 $font-body: 'Merriweather', serif;
 
+
+@mixin translate($x, $y) {
+	-ms-transform: translate($x, $y);
+	-webkit-transform: translate($x, $y);
+	-moz-transform: translate($x, $y);
+	transform: translate($x, $y);
+}
+
+
 body {
 	margin:0;
 	font-family: $font-body;
 	font-size: 16px;
 	line-height: 1.5em;
 	color: $brown;
+
 }
 img {
 	border:none;
 }
+
 a {
 	text-decoration: none;
 	color:black;
@@ -172,6 +183,7 @@ path[class^="side"]
 	img{
 		display: block;
 		margin: auto;
+		position: relative;
 		&:nth-child(1) {
 			margin-top:100px;
 		}
@@ -190,9 +202,11 @@ path[class^="side"]
 	background: url("../img/border.png")  repeat-y center 0;
 	height: 250px;
 	position: relative;
-	margin:80px auto;
+	margin: 80px auto 50px auto;
 }
-
+.bottom {
+	margin-top: -200px
+}
 .subscribe {
 	margin: 0 auto;
 	height: 350px;
@@ -291,9 +305,7 @@ input[type=submit]
 }
 
 @media (min-width: 768px) {
-	.bottom {
-		height: 100px;
-	}
+	
 	.hexText{
 		position: relative;
 		margin-bottom: -150px;
@@ -319,24 +331,28 @@ input[type=submit]
 			&:nth-child(1) {
 				background: url('../img/hex_dine.png') center center no-repeat;
 				margin-right: 65%;
+				clear: both;
 				float: right;
 			}
 			&:nth-child(2) {
 				background: url('../img/hex_connect.png') center center no-repeat;
-				top: -254px;
+				@include translate(0, -254px);
+				/*top: -254px;*/
 				margin-left: 65%;
-				
+				clear: both;
 			}
 			&:nth-child(3) {
 				background: url('../img/hex_learn.png') center center no-repeat;
-				top:-300px;
+				@include translate(0, -300px);
 				margin-left:65%;
+				clear: both;
 			}
 			&:nth-child(4) {
 				background: url('../img/hex_play.png') center center no-repeat;
 				float: right;
 				margin-right: 50%;
-				top:-150px;
+				clear: both;
+				@include translate(0, -150px);
 			}
 		}
 	}
@@ -366,13 +382,16 @@ input[type=submit]
 		}
 		&:nth-child(2) {
 			margin-left:50%;
-			top: 200px;
+			@include translate(0, 200px);
 		}
 		&:nth-child(3) {
-			top: 140px;
+			@include translate(0, 140px);
 			margin-left: 50%;
 		}
 		
+	}
+	.bottom {
+		margin-top:120px;
 	}
 }
 @media (max-width: 767px) and (orientation : landscape) {
