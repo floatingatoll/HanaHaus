@@ -3,6 +3,7 @@
 */
 
 if (!("ontouchstart" in document.documentElement)) {
+
   var s = skrollr.init({
       forceHeight: false,
       constants: {
@@ -39,7 +40,8 @@ function createHoneycomb() {
   var svgWidth  = svg.style('width').split('px')[0];
   var svgHeight = window.innerHeight;
    
-  var imageWidth, imageHeight;
+  //var imageWidth, imageHeight;
+  /*
   if (window.innerWidth < window.innerHeight) {
     imageHeight = svgHeight;
     imageWidth = svgHeight * 1197 /770;
@@ -48,7 +50,11 @@ function createHoneycomb() {
      imageHeight = 770/1197*svgWidth;
     imageWidth = svgWidth;
   }
+*/
 
+  var ratio = Math.max(window.innerWidth / 1197, window.innerHeight / 770);
+  var imageWidth = ratio * 1197;
+  var imageHeight = ratio * 770;
   var colors1 = ["white", "rgb(240,240,240)", "rgb(247,247,247)"];
   var colors2 = ["rgb(91,201,227)", "rgb(222,225,78)", "rgb(167,155,148)"];
 
@@ -73,7 +79,7 @@ var c = [{ "x": 0,   "y":0},
  //This is the accessor function we talked about above
 
 var dataSet = [a,b,c];
-  var vNum = Math.floor(imageHeight/((3*r+Math.sin(pi/6)*r)/2));
+  var vNum = Math.round(imageHeight/((3*r+Math.sin(pi/6)*r)/2));
   var hNum = Math.ceil(imageWidth/((3*r+Math.sin(pi/6)*r)/2))+1;
   //The SVG Container
   for (var i=0; i< vNum; i++){
@@ -210,7 +216,15 @@ function onDeviceMotion(event) {
 function subscribe(){
   
 }
+function resize(width, height, maxWidth, maxHeight) {
+    var ratio = Math.min(maxWidth / width, maxHeight / height);
+    var newWidth = ratio * width;
+    var newHeight = ratio * height;
 
+    console.log(newWidth + ' ' + newHeight); // Test
+
+    // Process resizing...
+}
 lerp = function(a,b,u) {
       return (1-u) * a + u * b;
   };
