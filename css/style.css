@@ -13,9 +13,6 @@ a {
   color: white; 
 }
 
-a.mobile {
-  text-decoration: none;
-  color: #d3d3d3; 
 }
 a:hover {
   text-decoration: none;
