@@ -294,7 +294,8 @@ input[type=submit] {
         transform: translate(0, -120px); } }
 @media (min-width: 768px) and (max-width: 992px) {
   .intro {
-    background-position: center center !important; color: #665e5b; }
+    background-position: center center !important;}
+  .intro .introSide a{color: #665e5b;}
     .intro .introSide h2 {
       font-size: 3.5em; }
 
@@ -362,7 +363,9 @@ input[type=submit] {
     margin-bottom: 80px; } }
 @media (max-width: 767px) and (orientation: landscape) {
   .intro .introSide {
-    max-width: 35%; } }
+    max-width: 35%; } 
+  .intro .introSide a{color: #665e5b;}
+}
 @media (max-width: 480px) {
   .intro .introSide {
     max-width: 60%; }
@@ -392,6 +395,7 @@ input[type=submit] {
       .intro .introSide h2 {
         font-size: 2em;
         margin: 200px auto 30px 50px; }
+        .intro .introSide a{color: #665e5b;}
       .intro .introSide p {
         display: none; }
 
