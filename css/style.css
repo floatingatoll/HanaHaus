@@ -13,7 +13,7 @@ a {
   color: white; 
 }
 
-a:hover 
+a:hover {
   text-decoration: none;
   color: #d3d3d3; 
 }
