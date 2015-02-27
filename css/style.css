@@ -401,6 +401,7 @@ input[type=submit] {
 
   .introText {
     margin: 80px 20px; }
+  .introText a{color: #665e5b;}
 
   .location a {
     text-align: center;
