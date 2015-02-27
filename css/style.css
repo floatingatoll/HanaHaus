@@ -294,7 +294,7 @@ input[type=submit] {
         transform: translate(0, -120px); } }
 @media (min-width: 768px) and (max-width: 992px) {
   .intro {
-    background-position: center center !important; }
+    background-position: center center !important; color: #665e5b; }
     .intro .introSide h2 {
       font-size: 3.5em; }
 
